@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+		<meta charset = "utf-8">
+		<title>
+		Climate Action Collabration System
+		</title>
+        <link rel="stylesheet" href="cssFileFormating.css">
+        
+<link rel="stylesheet" href="sstylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+        <style>
+
+ .login-container {
+           
+            background-color: transparent;
+            border-radius:  15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         
+            top: 50%;
+           
+            transform: translate(-50%, -50%);
+            display: none;
+  position: absolute;
+  right: -150px;
+  width: 350px;
+hight:700px;
+  padding: 10px;
+        }
+   input {
+            width: 70%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+   background: transparent;
+border-radius:  15px;
+
+        }
+
+        button {
+          width:100%;
+            padding: 10px;
+            background-color: transparent;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+      
+
+       table {
+            border-collapse: collapse;
+            width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size : 30px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+  border-bottom: 1px solid #ddd;
+
+   
+        }
+
+        th {
+            background-color: #f2f2f2;
+  padding-top: 10px;
+		   padding-bottom: 20px;
+		   padding-left: 30px;
+  padding-right: 40px;
+
+        }
+
+    .search-container {
+            margin-bottom: 20px; /* Increased margin for better spacing */
+        }
+
+        #searchInput {
+            padding: 10px; /* Increased padding for larger input */
+            font-size: 16px; /* Increased font size for better readability */
+        }
+
+        #searchButton, #refreshButton {
+            padding: 12px; /* Increased padding for larger buttons */
+            font-size: 16px; /* Increased font size for better readability */
+            margin-left: 10px; /* Added margin for spacing between buttons */
+        }
+
+        .results-container {
+            margin-top: 10px;
+        }
+
+		
+
+    
+
+
+              	.b{
+        		width : 1000px;
+        		height: 300px;
+        		padding: 22px;
+        		box-shadow: 1px 1px 8px 8px black;
+        		font-size : 22px;
+        		color: green;
+        		margin: auto;
+
+        		}
+
+        		.k{
+        	   padding-top: 50px;
+			   padding-right: 30px;
+			   padding-bottom: 50px;
+ 			 padding-left: 80px;
+        		 }
+
+
+	* {box-sizing: border-box;}
+			body {font-family: Verdana, sans-serif;}
+
+			.mySlides {display: none;}
+
+			img {vertical-align: middle;}
+
+		.slideshow-container {
+ 				 max-width: 1000px;
+ 				 position: relative;
+ 				 margin: auto;
+				}
+
+
+
+
+			.numbertext {
+ 					 color: #f2f2f2;
+ 					 font-size: 12px;
+ 					 padding: 8px 12px;
+ 					 position: absolute;
+ 					 top: 0;
+			}
+
+
+
+
+			.active {
+ 				 background-color: #717171;
+					}
+
+
+				.fade {
+ 				 animation-name: fade;
+  					animation-duration: 1.5s;
+					}
+
+			@keyframes fade {
+ 				 from {opacity: .4}
+ 			 to {opacity: 1}
+				}
+
+
+        		</style>
+
+	</head>
+
+	<div class="header-tab">
+	     <a href="homePage.html">
+	       <div class="header-tab-button">
+	         <div class="textAllignment-header-tab">
+	           <p style="margin: auto;"> <b>Home</b> </p> <b></b>
+	         </div>
+	       </div>
+	     </a>
+	
+ 
+
+	       <a href="HistoryPage.html">
+	         <div class="header-tab-button2">
+	           <div class="textAllignment-header-tab2">
+	             <p style="margin: auto;"> History </p>
+	           </div>
+	         </div>
+	       </a>
+
+	     
+	  <div class="header-tab-button2">
+	           <div class="textAllignment-header-tab2">
+	             <p style="margin: auto;"> </p>
+	           </div>
+	         </div>
+
+	      <a href="">
+	         <div class="header-tab-button2">
+	           <div class="textAllignment-header-tab2">
+	             <p style="margin: auto;"> Join Discussion</p>
+	           </div>
+	         </div>
+	     </a>
+     
+	  <div class="header-tab-button2">
+	           <div class="textAllignment-header-tab2">
+	             <p style="margin: auto;"> </p>
+	           </div>
+	         </div>
+
+	
+
+	
+	<div class="header-tab-button2">
+	<button onclick="showLoginPopup()">Login</button>
+	
+   </div>
+    <!-- Login Popup -->
+  
+    <div id="loginPopup" class="login-container">
+
+ 
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+
+            <label for="password"><br><br><br>Password:</label>
+            <input type="password" id="password" required><br>
+
+           <button type="button" onclick="checkLogin()">Login</button>
+        </form>
+        <button class="close" onclick="closeLoginPopup()">X</button>
+    </div>
+
+	
+	
+	
+	
+	
+    </div>
+
+
+
+
+<body>
+
+
+<div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+
+
+
+        <div class="websitestyle">
+         <div class="headingformat">
+           <div class="movingMarquee">
+             <div class="textformat">
+             <marquee style="font-size:90% loop=:1">
+               <b>Our mission is to create a
+platform that fosters
+collaboration, inspires
+innovation, and empowers
+Individuals and oragnization
+to take meaningful steps
+toward a more sustainablee
+future. </b>
+             </marquee>
+             <br>
+             </div>
+           </div>
+           <br>
+
+           <h1>Climate Action Collabration System</h1>
+
+		   <div class="slideshow-container">
+
+		   <div class="mySlides fade">
+		     <div class="numbertext">1 / 3</div>
+		     <img src="Pictures/i1.jpg" style="width:100%">
+
+		   </div>
+
+		   <div class="mySlides fade">
+		     <div class="numbertext">2 / 3</div>
+		     <img src="Pictures/i2.jpg" style="width:100%">
+
+		   </div>
+
+		   <div class="mySlides fade">
+		     <div class="numbertext">3 / 3</div>
+		     <img src="Pictures/i3.jpg" style="width:100%">
+
+		   </div>
+
+		   </div>
+		   <br>
+
+		   <div style="text-align:center">
+		     <span class="dot"></span>
+		     <span class="dot"></span>
+		     <span class="dot"></span>
+</div>
+
+<h2> Our Journey Towards Sustainable Collaboration </h2><br><br><br>
+<p>Welcome to a platform born out of a shared vision for a sustainable future. The Climate Action Collaboration System was conceived in 2023 by a group of passionate individuals determined to make a meaningful impact in the fight against climate change. Frustrated by the fragmented efforts in addressing environmental challenges, we envisioned a platform that could unite diverse stakeholders, fostering collaboration and innovation.
+Our platform is set evolve into a dynamic hub where stakeholders from various backgrounds, industries, and regions converge to drive climate action. 
+
+Today, we stand as a testament to the power of collective action. Together, we've facilitated groundbreaking projects, shared invaluable knowledge, and forged lasting partnerships. Join us in our mission to create a sustainable future. The journey continues, and your contribution matters.</p><br><br><br><br><br>
+
+<h2> Search for projects </h2> <br><br>
+  <body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search projects...">
+        <button id="searchButton" onclick="searchProjects()">Search</button>
+        <button id="refreshButton" onclick="refreshResults()">Clear</button>
+    </div>
+
+    <!-- Display search results here -->
+    <div class="results-container" id="resultsContainer"></div>
+
+    <script>
+        // Open a WebSQL database
+        var db = openDatabase('myDatabase', '1.0', 'My Database', 2 * 1024 * 1024);
+
+        // Create table if not exists and insert data
+        db.transaction(function(tx) {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS projects (id INTEGER PRIMARY KEY, name TEXT NOT NULL, status TEXT NOT NULL)');
+
+            // Check if data is already inserted
+            tx.executeSql('SELECT * FROM projects', [], function(tx, results) {
+                if (results.rows.length === 0) {
+                    // Insert data if the table is empty
+                    tx.executeSql('INSERT INTO projects (name, status) VALUES (?, ?)', ['Renewable Energy Initiative', 'In Progress']);
+                    tx.executeSql('INSERT INTO projects (name, status) VALUES (?, ?)', ['Tree Planting Campaign', 'Not Started']);
+                    tx.executeSql('INSERT INTO projects (name, status) VALUES (?, ?)', ['Carbon Footprint Reduction', 'Completed']);
+                    tx.executeSql('INSERT INTO projects (name, status) VALUES (?, ?)', ['Climate Education Program', 'In Progress']);
+                    tx.executeSql('INSERT INTO projects (name, status) VALUES (?, ?)', ['Green Transportation Project', 'Not Started']);
+                }
+            });
+        });
+
+        var projects = [];
+
+        function searchProjects() {
+            var query = document.getElementById('searchInput').value;
+
+            // Execute the SQL query
+            db.transaction(function(tx) {
+                tx.executeSql('SELECT * FROM projects', [], function(tx, results) {
+                    projects = Array.from(results.rows);
+                    displayResults(query);
+                });
+            });
+        }
+
+        function displayResults(query) {
+            var resultsContainer = document.getElementById('resultsContainer');
+            var fuse = new Fuse(projects, { keys: ['name'] });
+            var result = fuse.search(query);
+
+            if (result.length > 0) {
+                var tableHtml = "<table><tr><th>ID</th><th>Project Name</th><th>Status</th></tr>";
+
+                for (var i = 0; i < result.length; i++) {
+                    var project = result[i].item;
+                    tableHtml += "<tr><td>" + project.id + "</td><td>" + project.name + "</td><td>" + project.status + "</td></tr>";
+                }
+
+                tableHtml += "</table>";
+                resultsContainer.innerHTML = tableHtml;
+            } else {
+                resultsContainer.innerHTML = "No results found";
+            }
+        }
+
+        function refreshResults() {
+            var resultsContainer = document.getElementById('resultsContainer');
+            resultsContainer.innerHTML = ''; // Clear the results
+        }
+    </script>
+	
+
+
+
+
+
+
+
+	<footer>
+	 					<div class="content">
+	 					    
+	 					     <div class="right box">
+
+	 					           <div class="lower">
+	 							   <div class="topic">Contact us</div>
+	 							   <div class="email">
+	 							  <h1>contact-us@gmail.com</h1>
+	 							    </div>
+	 					       </div>
+	 					         </div>
+	 					    
+	 					     </div>
+</footer>
+
+    <script>
+        var users = [
+            { email: 'user1@example.com', password: 'password1' },
+            { email: 'user2@example.com', password: 'password2' },
+            // ... add more users as needed
+        ];
+
+        function showLoginPopup() {
+            document.getElementById('loginPopup').style.display = 'block';
+        }
+
+        function closeLoginPopup() {
+            document.getElementById('loginPopup').style.display = 'none';
+        }
+
+        function checkLogin() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            var user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                window.location.href = 'Home.html';
+            } else {
+                alert('Invalid email or password. Please try again.');
+            }
+        }
+    </script>
+
+<script>
+	let slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+ 		 let i;
+ 		 let slides = document.getElementsByClassName("mySlides");
+ 		 let dots = document.getElementsByClassName("dot");
+ 	 for (i = 0; i < slides.length; i++)
+ 	 {
+   			 slides[i].style.display = "none";
+	  }
+  		slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
+
+
+
+$(document).ready(function(){
+
+  $("a").on('click', function(event) {
+
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+
+      var hash = this.hash;
+
+
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+
+
+
+
+$(document).ready(function(){
+
+  $("a").on('click', function(event) {
+
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+      var hash = this.hash;
+
+ scroll
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+</script>
+
+
+
+	</body>
+</html>
+
+
+
+
+
+
+
+

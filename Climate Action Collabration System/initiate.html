@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+		<meta charset = "utf-8">
+		<title>
+		Climate Action Collabration System
+		</title>
+        <link rel="stylesheet" href="cssFileFormating.css">
+  <link rel="stylesheet" href="sstylesheet.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+        <style>
+
+
+   input {
+            width: 200px;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+   background: transparent;
+border-radius:  15px;
+
+        }
+    form {
+      max-width: 600px; /* Adjust the max width of the form as needed */
+      margin: auto; /* Center the form on the page */
+    }
+
+  
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+ background: transparent;
+border-radius:  15px;
+border: groove;
+    }
+
+    
+
+
+        button {
+          width:200px;
+            padding: 10px;
+        
+            color: black;
+            border: groove;
+          border-radius:  15px;
+            cursor: pointer;
+ background: transparent;
+        }
+
+    
+
+    
+		
+
+     
+
+
+              	.b{
+        		width : 1000px;
+        		height: 300px;
+        		padding: 22px;
+        		box-shadow: 1px 1px 8px 8px black;
+        		font-size : 22px;
+        		color: green;
+        		margin: auto;
+
+        		}
+
+        		.k{
+        	   padding-top: 50px;
+			   padding-right: 30px;
+			   padding-bottom: 50px;
+ 			 padding-left: 80px;
+        		 }
+
+
+	* {box-sizing: border-box;}
+			body {font-family: Verdana, sans-serif;}
+
+			.mySlides {display: none;}
+
+			img {vertical-align: middle;}
+
+		.slideshow-container {
+ 				 max-width: 1000px;
+ 				 position: relative;
+ 				 margin: auto;
+				}
+
+
+
+
+			.numbertext {
+ 					 color: #f2f2f2;
+ 					 font-size: 12px;
+ 					 padding: 8px 12px;
+ 					 position: absolute;
+ 					 top: 0;
+			}
+
+
+
+
+			.active {
+ 				 background-color: #717171;
+					}
+
+
+				.fade {
+ 				 animation-name: fade;
+  					animation-duration: 1.5s;
+					}
+
+			@keyframes fade {
+ 				 from {opacity: .4}
+ 			 to {opacity: 1}
+				}
+
+
+        		</style>
+
+	</head>
+	<div class="header-tab">
+	     <a href="Home.html">
+	       <div class="header-tab-button">
+	         <div class="textAllignment-header-tab">
+	           <p style="margin: auto;"> <b>Home</b> </p> <b></b>
+	         </div>
+	       </div>
+	     </a>
+
+
+	       <a href="History.html">
+	         <div class="header-tab-button2">
+	           <div class="textAllignment-header-tab2">
+	             <p style="margin: auto;"> History </p>
+	           </div>
+	         </div>
+	       </a>
+
+	       <a href="initiate.html">
+	         <div class="header-tab-button2">
+	           <div class="textAllignment-header-tab2">
+	             <p style="margin: auto;"> Initiate Project </p>
+	           </div>
+	         </div>
+	       </a>
+
+	       <a href="">
+	         <div class="header-tab-button2">
+	           <div class="textAllignment-header-tab2">
+	             <p style="margin: auto;"> Join Project </p>
+	           </div>
+	         </div>
+	       </a>
+
+	       <a href="">
+	         <div class="header-tab-button2">
+	           <div class="textAllignment-header-tab2">
+	             <p style="margin: auto;"> Manage Project </p>
+	           </div>
+	         </div>
+	       </a>
+
+
+	       	       <a href="">
+		   	         <div class="header-tab-button2">
+		   	           <div class="textAllignment-header-tab2">
+		   	             <p style="margin: auto;"> Manage Funding  </p>
+		   	           </div>
+		   	         </div>
+	       </a>
+
+	       	       <a href="">
+		   	         <div class="header-tab-button2">
+		   	           <div class="textAllignment-header-tab2">
+		   	             <p style="margin: auto;"> Manage Team </p>
+		   	           </div>
+		   	         </div>
+	       </a>
+
+	       	       <a href="">
+		   	         <div class="header-tab-button2">
+		   	           <div class="textAllignment-header-tab2">
+		   	             <p style="margin: auto;">  Track Budget</p>
+		   	           </div>
+		   	         </div>
+	       </a>
+
+	       	       <a href="">
+		   	         <div class="header-tab-button2">
+		   	           <div class="textAllignment-header-tab2">
+		   	             <p style="margin: auto;"> Intreact </p>
+		   	           </div>
+		   	         </div>
+	       </a>
+
+
+	       
+	
+	
+ <a href="homePage.html">
+		   	         <div class="header-tab-button2">
+		   	           <div class="textAllignment-header-tab2">
+		   	             <p style="margin: auto;"> Log Out </p>
+		   	           </div>
+		   	         </div>
+	       </a>
+
+	
+	
+	
+	
+	
+    </div>
+<body>
+<div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+
+
+
+        <div class="websitestyle">
+         <div class="headingformat">
+           <div class="movingMarquee">
+             <div class="textformat">
+             <marquee style="font-size:90% loop=:1">
+               <b>Our mission is to create a
+platform that fosters
+collaboration, inspires
+innovation, and empowers
+Individuals and oragnization
+to take meaningful steps
+toward a more sustainablee
+future. </b>
+             </marquee>
+             <br>
+             </div>
+           </div>
+           <br>
+
+           
+
+		  </div>
+
+		   </div>
+		   <br>
+
+		   <div style="text-align:center">
+		     <span class="dot"></span>
+		     <span class="dot"></span>
+		     <span class="dot"></span>
+</div>
+
+  <h1>Project Initiation</h1>
+
+<form id="projectForm">
+  <label for="projectTitle">Project Title:</label>
+  <input type="text" id="projectTitle" name="projectTitle" required><br>
+
+  <div class="textarea-container">
+    <label for="projectDescription">Project Description:</label>
+    <textarea id="projectDescription" name="projectDescription" required></textarea>
+  </div>
+
+  <div class="textarea-container">
+    <label for="projectObjective">Project Objective:</label>
+    <textarea id="projectObjective" name="projectObjective" required></textarea>
+  </div>
+
+  <label for="projectType">Project Type:</label>
+  <select id="projectType" name="projectType" required>
+    <option value="renewableEnergy">Renewable Energy</option>
+    <option value="environment">Environment</option>
+<option value="sustainbleEnergy">Sustainble Energy</option>
+<option value="waterManagement">Water Management</option>
+<option value="reforestation">Reforestation</option>
+<option value="climateEducation">Climate Education</option>
+<option value="foodManagement">Food Management</option>
+<option value="transportation">Transportation</option>
+
+  </select><br>
+
+  <label for="projectLocation">Project Location:</label>
+  <select id="projectLocation" name="projectLocation" required>
+    <option value="abuDhabi">Abu Dhabi</option>
+    <option value="dubai">Dubai</option>
+    <option value="sharjah">Sharjah</option>
+  </select><br>
+
+  <label for="startDate">Start Date:</label>
+  <input type="date" id="startDate" name="startDate" required><br>
+
+  <label for="endDate">End Date:</label>
+  <input type="date" id="endDate" name="endDate" required><br>
+
+ <button type="button" id="initiateProjectBtn" onclick="initiateProject()">Initiate Project</button>
+</form>
+
+<div id="thankYouMessage" style="display:none; color: green; margin-top: 20px;">
+  Thank you for initiating the project!
+</div>
+
+
+
+<script>
+  function initiateProject() {
+    const formData = {
+      title: document.getElementById("projectTitle").value,
+      description: document.getElementById("projectDescription").value,
+      type: document.getElementById("projectType").value,
+      location: document.getElementById("projectLocation").value,
+      objective: document.getElementById("projectObjective").value,
+      start: document.getElementById("startDate").value,
+      end: document.getElementById("endDate").value
+    };
+
+    fetch('/initiateProject', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Response:', data);
+        if (data.success) {
+          document.getElementById("thankYouMessage").style.display = "block";
+        } else {
+          console.error('Error:', data.message);
+          // Handle error if needed
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  }
+</script>
+</body>
+</html>
